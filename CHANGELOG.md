@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [3.2.0](https://github.com/team-telnyx/telnyx-webrtc-ios/releases/tag/3.2.0) (2026-03-06)
+
+### Features
+- **Automatic Call Quality Reporting**: Implemented automatic collection and reporting of WebRTC statistics and call lifecycle events. The SDK now collects audio quality metrics (MOS, jitter, packet loss, RTT), connection stats, and structured debug logs during calls, then automatically posts comprehensive call reports to voice-sdk-proxy at call end for troubleshooting and quality analysis. Configurable via `TxConfig` with options for collection interval, log level filtering, and buffer limits. Enabled by default ([#325](https://github.com/team-telnyx/telnyx-webrtc-ios/pull/325))
+
 ## [3.1.0](https://github.com/team-telnyx/telnyx-webrtc-ios/releases/tag/3.1.0) (2026-02-26)
 
 ### Bug Fixes
