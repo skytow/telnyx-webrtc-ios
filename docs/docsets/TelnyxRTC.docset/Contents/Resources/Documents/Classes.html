@@ -17,7 +17,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">TelnyxRTC 3.1.0 Docs</a> (68% documented)</p>
+        <p><a href="index.html">TelnyxRTC 3.2.0 Docs</a> (62% documented)</p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -52,6 +52,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/MOSCalculator.html">MOSCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TelnyxCallReportCollector.html">TelnyxCallReportCollector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TelnyxLogCollector.html">TelnyxLogCollector</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/TranscriptCancellable.html">TranscriptCancellable</a>
@@ -143,13 +149,34 @@
                 <a href="Structs/AiConversationParams.html">AiConversationParams</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/AnyCodable.html">AnyCodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AudioStats.html">AudioStats</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/AudioVisualizerConfig.html">AudioVisualizerConfig</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/CallQualityMetrics.html">CallQualityMetrics</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/CallReportConfig.html">CallReportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CallReportInterval.html">CallReportInterval</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CallReportPayload.html">CallReportPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CallReportSummary.html">CallReportSummary</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/CallTerminationReason.html">CallTerminationReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ConnectionStats.html">ConnectionStats</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ConversationContent.html">ConversationContent</a>
@@ -159,6 +186,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ImageURL.html">ImageURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/InboundAudioStats.html">InboundAudioStats</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LogCollectorConfig.html">LogCollectorConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LogEntry.html">LogEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/OutboundAudioStats.html">OutboundAudioStats</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/TranscriptionItem.html">TranscriptionItem</a>
@@ -528,6 +567,34 @@ Thread-safe singleton implementation that tracks call connection milestones.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9TelnyxRTC0A12LogCollectorC"></a>
+                    <a name="//apple_ref/swift/Class/TelnyxLogCollector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC0A12LogCollectorC">TelnyxLogCollector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Collects debug logs during a call for inclusion in call reports</p>
+
+                        <a href="Classes/TelnyxLogCollector.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TelnyxLogCollector</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9TelnyxRTC15TxDefaultLoggerC"></a>
                     <a name="//apple_ref/swift/Class/TxDefaultLogger" class="dashAnchor"></a>
                     <a class="token" href="#/s:9TelnyxRTC15TxDefaultLoggerC">TxDefaultLogger</a>
@@ -643,12 +710,51 @@ The Call object manages the entire lifecycle of a call, from initiation to termi
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC0A19CallReportCollectorC"></a>
+                    <a name="//apple_ref/swift/Class/TelnyxCallReportCollector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC0A19CallReportCollectorC">TelnyxCallReportCollector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Collects WebRTC statistics during a call and posts them to voice-sdk-proxy
+at the end of the call for quality analysis and debugging.</p>
+
+<p>Stats Collection Strategy (based on Twilio/Jitsi best practices):</p>
+
+<ul>
+<li>Collects stats at regular intervals (default 5 seconds)</li>
+<li>Stores cumulative values (packets, bytes) from WebRTC API</li>
+<li>Calculates averages for variable metrics (audio level, jitter, RTT)</li>
+<li>Uses in-memory buffer with size limits for long calls</li>
+<li>Posts aggregated stats to voice-sdk-proxy on call end</li>
+</ul>
+
+                        <a href="Classes/TelnyxCallReportCollector.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TelnyxCallReportCollector</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2026 <a class="link" href="https://www.telnyx.com/" target="_blank" rel="external noopener">Telnyx LLC</a>. All rights reserved. (Last updated: 2026-02-26)</p>
+          <p>&copy; 2026 <a class="link" href="https://www.telnyx.com/" target="_blank" rel="external noopener">Telnyx LLC</a>. All rights reserved. (Last updated: 2026-03-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

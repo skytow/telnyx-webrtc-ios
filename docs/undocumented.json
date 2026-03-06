@@ -8,6 +8,405 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 15,
+      "symbol": "LogEntry.timestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 16,
+      "symbol": "LogEntry.level",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 17,
+      "symbol": "LogEntry.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 18,
+      "symbol": "LogEntry.context",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 20,
+      "symbol": "LogEntry.init(timestamp:level:message:context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 30,
+      "symbol": "OutboundAudioStats.packetsSent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 31,
+      "symbol": "OutboundAudioStats.bytesSent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 32,
+      "symbol": "OutboundAudioStats.audioLevelAvg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 33,
+      "symbol": "OutboundAudioStats.bitrateAvg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 35,
+      "symbol": "OutboundAudioStats.init(packetsSent:bytesSent:audioLevelAvg:bitrateAvg:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 45,
+      "symbol": "InboundAudioStats.packetsReceived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 46,
+      "symbol": "InboundAudioStats.bytesReceived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 47,
+      "symbol": "InboundAudioStats.packetsLost",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 48,
+      "symbol": "InboundAudioStats.packetsDiscarded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 49,
+      "symbol": "InboundAudioStats.jitterBufferDelay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 50,
+      "symbol": "InboundAudioStats.jitterBufferEmittedCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 51,
+      "symbol": "InboundAudioStats.totalSamplesReceived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 52,
+      "symbol": "InboundAudioStats.concealedSamples",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 53,
+      "symbol": "InboundAudioStats.concealmentEvents",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 54,
+      "symbol": "InboundAudioStats.audioLevelAvg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 55,
+      "symbol": "InboundAudioStats.jitterAvg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 56,
+      "symbol": "InboundAudioStats.bitrateAvg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 58,
+      "symbol": "InboundAudioStats.init(packetsReceived:bytesReceived:packetsLost:packetsDiscarded:jitterBufferDelay:jitterBufferEmittedCount:totalSamplesReceived:concealedSamples:concealmentEvents:audioLevelAvg:jitterAvg:bitrateAvg:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 89,
+      "symbol": "AudioStats.outbound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 90,
+      "symbol": "AudioStats.inbound",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 92,
+      "symbol": "AudioStats.init(outbound:inbound:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 100,
+      "symbol": "ConnectionStats.roundTripTimeAvg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 101,
+      "symbol": "ConnectionStats.packetsSent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 102,
+      "symbol": "ConnectionStats.packetsReceived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 103,
+      "symbol": "ConnectionStats.bytesSent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 104,
+      "symbol": "ConnectionStats.bytesReceived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 106,
+      "symbol": "ConnectionStats.init(roundTripTimeAvg:packetsSent:packetsReceived:bytesSent:bytesReceived:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 123,
+      "symbol": "CallReportInterval.intervalStartUtc",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 124,
+      "symbol": "CallReportInterval.intervalEndUtc",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 125,
+      "symbol": "CallReportInterval.audio",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 126,
+      "symbol": "CallReportInterval.connection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 128,
+      "symbol": "CallReportInterval.init(intervalStartUtc:intervalEndUtc:audio:connection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 138,
+      "symbol": "CallReportSummary.callId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 139,
+      "symbol": "CallReportSummary.destinationNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 140,
+      "symbol": "CallReportSummary.callerNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 141,
+      "symbol": "CallReportSummary.direction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 142,
+      "symbol": "CallReportSummary.state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 143,
+      "symbol": "CallReportSummary.durationSeconds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 144,
+      "symbol": "CallReportSummary.telnyxSessionId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 145,
+      "symbol": "CallReportSummary.telnyxLegId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 146,
+      "symbol": "CallReportSummary.voiceSdkSessionId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 147,
+      "symbol": "CallReportSummary.sdkVersion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 148,
+      "symbol": "CallReportSummary.startTimestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 149,
+      "symbol": "CallReportSummary.endTimestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 151,
+      "symbol": "CallReportSummary.init(callId:destinationNumber:callerNumber:direction:state:durationSeconds:telnyxSessionId:telnyxLegId:voiceSdkSessionId:sdkVersion:startTimestamp:endTimestamp:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 182,
+      "symbol": "CallReportPayload.summary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 183,
+      "symbol": "CallReportPayload.stats",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 184,
+      "symbol": "CallReportPayload.logs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 185,
+      "symbol": "CallReportPayload.segment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 187,
+      "symbol": "CallReportPayload.init(summary:stats:logs:segment:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 199,
+      "symbol": "AnyCodable.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/CallReportModels.swift",
+      "line": 201,
+      "symbol": "AnyCodable.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Models/Region.swift",
       "line": 12,
       "symbol": "Region.auto",
@@ -673,6 +1072,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Utils/TelnyxLogCollector.swift",
+      "line": 22,
+      "symbol": "LogCollectorConfig.init(enabled:level:maxEntries:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Utils/TelnyxLogCollector.swift",
+      "line": 54,
+      "symbol": "TelnyxLogCollector.init(config:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/Utils/TxLogger.swift",
       "line": 15,
       "symbol": "TxDefaultLogger.init()",
@@ -824,6 +1237,20 @@
       "line": 56,
       "symbol": "CallState.Reason.serverError",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/WebRTC/Stats/TelnyxCallReportCollector.swift",
+      "line": 20,
+      "symbol": "CallReportConfig.init(enabled:interval:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/telnyx-webrtc-ios/telnyx-webrtc-ios/TelnyxRTC/Telnyx/WebRTC/Stats/TelnyxCallReportCollector.swift",
+      "line": 86,
+      "symbol": "TelnyxCallReportCollector.init(config:logCollectorConfig:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

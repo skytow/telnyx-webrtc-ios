@@ -174,6 +174,41 @@ Controls whether the SDK should force TURN relay for peer connections.
 When enabled, the SDK will only use TURN relay candidates for ICE gathering,
 which prevents the "local network access" permission popup from appearing.
 
+### `enableCallReports`
+
+```swift
+public internal(set) var enableCallReports: Bool = true
+```
+
+Enable automatic call quality reporting to voice-sdk-proxy.
+When enabled, WebRTC stats are collected periodically during calls
+and posted to the voice-sdk-proxy /call_report endpoint when the call ends.
+
+### `callReportInterval`
+
+```swift
+public internal(set) var callReportInterval: TimeInterval = 5.0
+```
+
+Interval in seconds for collecting call statistics.
+Stats are aggregated over each interval and stored locally until call end.
+
+### `callReportLogLevel`
+
+```swift
+public internal(set) var callReportLogLevel: String = "debug"
+```
+
+Minimum log level to capture for call reports ("debug", "info", "warn", "error").
+
+### `callReportMaxLogEntries`
+
+```swift
+public internal(set) var callReportMaxLogEntries: Int = 1000
+```
+
+Maximum number of log entries to buffer per call.
+
 ### `callInfo`
 
 ```swift

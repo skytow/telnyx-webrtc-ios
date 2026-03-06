@@ -17,7 +17,7 @@
     <a title="Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">TelnyxRTC 3.1.0 Docs</a> (68% documented)</p>
+        <p><a href="index.html">TelnyxRTC 3.2.0 Docs</a> (62% documented)</p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -52,6 +52,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/MOSCalculator.html">MOSCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TelnyxCallReportCollector.html">TelnyxCallReportCollector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TelnyxLogCollector.html">TelnyxLogCollector</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/TranscriptCancellable.html">TranscriptCancellable</a>
@@ -143,13 +149,34 @@
                 <a href="Structs/AiConversationParams.html">AiConversationParams</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/AnyCodable.html">AnyCodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AudioStats.html">AudioStats</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/AudioVisualizerConfig.html">AudioVisualizerConfig</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/CallQualityMetrics.html">CallQualityMetrics</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/CallReportConfig.html">CallReportConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CallReportInterval.html">CallReportInterval</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CallReportPayload.html">CallReportPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CallReportSummary.html">CallReportSummary</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/CallTerminationReason.html">CallTerminationReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ConnectionStats.html">ConnectionStats</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ConversationContent.html">ConversationContent</a>
@@ -159,6 +186,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ImageURL.html">ImageURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/InboundAudioStats.html">InboundAudioStats</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LogCollectorConfig.html">LogCollectorConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LogEntry.html">LogEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/OutboundAudioStats.html">OutboundAudioStats</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/TranscriptionItem.html">TranscriptionItem</a>
@@ -220,6 +259,284 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CallQualityMetrics</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Call%20Report%20Data%20Models"></a>
+                <a name="//apple_ref/swift/Section/Call Report Data Models" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Call%20Report%20Data%20Models"></a>
+                  <h3 class="section-name"><span>Call Report Data Models</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC8LogEntryV"></a>
+                    <a name="//apple_ref/swift/Struct/LogEntry" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC8LogEntryV">LogEntry</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log entry for debug information captured during a call</p>
+
+                        <a href="Structs/LogEntry.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LogEntry</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC18OutboundAudioStatsV"></a>
+                    <a name="//apple_ref/swift/Struct/OutboundAudioStats" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC18OutboundAudioStatsV">OutboundAudioStats</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Statistics for outbound audio stream</p>
+
+                        <a href="Structs/OutboundAudioStats.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">OutboundAudioStats</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC17InboundAudioStatsV"></a>
+                    <a name="//apple_ref/swift/Struct/InboundAudioStats" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC17InboundAudioStatsV">InboundAudioStats</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Statistics for inbound audio stream</p>
+
+                        <a href="Structs/InboundAudioStats.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">InboundAudioStats</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC10AudioStatsV"></a>
+                    <a name="//apple_ref/swift/Struct/AudioStats" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC10AudioStatsV">AudioStats</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Combined audio statistics for a reporting interval</p>
+
+                        <a href="Structs/AudioStats.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AudioStats</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC15ConnectionStatsV"></a>
+                    <a name="//apple_ref/swift/Struct/ConnectionStats" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC15ConnectionStatsV">ConnectionStats</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Connection statistics for a reporting interval</p>
+
+                        <a href="Structs/ConnectionStats.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ConnectionStats</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC18CallReportIntervalV"></a>
+                    <a name="//apple_ref/swift/Struct/CallReportInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC18CallReportIntervalV">CallReportInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Statistics collected during a single reporting interval</p>
+
+                        <a href="Structs/CallReportInterval.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CallReportInterval</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC17CallReportSummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/CallReportSummary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC17CallReportSummaryV">CallReportSummary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Summary information about the call</p>
+
+                        <a href="Structs/CallReportSummary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CallReportSummary</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC17CallReportPayloadV"></a>
+                    <a name="//apple_ref/swift/Struct/CallReportPayload" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC17CallReportPayloadV">CallReportPayload</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Complete call report payload sent to voice-sdk-proxy</p>
+
+                        <a href="Structs/CallReportPayload.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CallReportPayload</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/AnyCodable%20Helper"></a>
+                <a name="//apple_ref/swift/Section/AnyCodable Helper" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/AnyCodable%20Helper"></a>
+                  <h3 class="section-name"><span>AnyCodable Helper</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC10AnyCodableV"></a>
+                    <a name="//apple_ref/swift/Struct/AnyCodable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC10AnyCodableV">AnyCodable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Helper type for encoding/decoding arbitrary JSON values</p>
+
+                        <a href="Structs/AnyCodable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AnyCodable</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -482,6 +799,34 @@ This mirrors the RTCRtpCodecCapability structure from WebRTC</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9TelnyxRTC18LogCollectorConfigV"></a>
+                    <a name="//apple_ref/swift/Struct/LogCollectorConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC18LogCollectorConfigV">LogCollectorConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configuration options for the log collector</p>
+
+                        <a href="Structs/LogCollectorConfig.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LogCollectorConfig</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9TelnyxRTC8ImageURLV"></a>
                     <a name="//apple_ref/swift/Struct/ImageURL" class="dashAnchor"></a>
                     <a class="token" href="#/s:9TelnyxRTC8ImageURLV">ImageURL</a>
@@ -619,12 +964,40 @@ This mirrors the RTCRtpCodecCapability structure from WebRTC</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TelnyxRTC16CallReportConfigV"></a>
+                    <a name="//apple_ref/swift/Struct/CallReportConfig" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TelnyxRTC16CallReportConfigV">CallReportConfig</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configuration options for the call report collector</p>
+
+                        <a href="Structs/CallReportConfig.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CallReportConfig</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2026 <a class="link" href="https://www.telnyx.com/" target="_blank" rel="external noopener">Telnyx LLC</a>. All rights reserved. (Last updated: 2026-02-26)</p>
+          <p>&copy; 2026 <a class="link" href="https://www.telnyx.com/" target="_blank" rel="external noopener">Telnyx LLC</a>. All rights reserved. (Last updated: 2026-03-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
