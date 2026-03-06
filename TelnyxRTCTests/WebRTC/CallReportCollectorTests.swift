@@ -137,14 +137,14 @@ class CallReportCollectorTests: XCTestCase {
         let summary = CallReportSummary(
             callId: "test-call-123",
             state: "active",
+            durationSeconds: nil,
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
             voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: collector.callStartTime),
-            endTimestamp: nil,
-            durationSeconds: nil
+            endTimestamp: nil
         )
-        
+
         // Flush should create a payload
         let payload = collector.flush(summary: summary)
         
@@ -157,33 +157,42 @@ class CallReportCollectorTests: XCTestCase {
     
     func testMultipleFlushesIncrementSegmentIndex() {
         collector.start(peerConnection: mockPeerConnection)
-        
+
         let summary = CallReportSummary(
             callId: "test-call-123",
             state: "active",
+            durationSeconds: nil,
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
             voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: collector.callStartTime),
-            endTimestamp: nil,
-            durationSeconds: nil
+            endTimestamp: nil
         )
-        
-        // First flush
-        _ = collector.flush(summary: summary)
-        
-        // Add more stats
-        let waitExpectation = expectation(description: "Wait for more stats")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            waitExpectation.fulfill()
+
+        // Wait for stats to accumulate before first flush
+        let firstWait = expectation(description: "Wait for first stats")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            firstWait.fulfill()
         }
-        wait(for: [waitExpectation], timeout: 1.0)
-        
+        wait(for: [firstWait], timeout: 2.0)
+
+        // First flush
+        let firstPayload = collector.flush(summary: summary)
+        XCTAssertNotNil(firstPayload, "First flush should produce a payload")
+        XCTAssertEqual(firstPayload?.segment, 0, "First segment should be 0")
+
+        // Wait for more stats to accumulate
+        let secondWait = expectation(description: "Wait for more stats")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            secondWait.fulfill()
+        }
+        wait(for: [secondWait], timeout: 2.0)
+
         // Second flush
         let secondPayload = collector.flush(summary: summary)
-        
+        XCTAssertNotNil(secondPayload, "Second flush should produce a payload")
         XCTAssertEqual(secondPayload?.segment, 1, "Second segment should be 1")
-        
+
         collector.stop()
     }
     
@@ -193,12 +202,12 @@ class CallReportCollectorTests: XCTestCase {
         let summary = CallReportSummary(
             callId: "test-call-123",
             state: "active",
+            durationSeconds: nil,
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
             voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: Date()),
-            endTimestamp: nil,
-            durationSeconds: nil
+            endTimestamp: nil
         )
         
         let payload = collector.flush(summary: summary)

@@ -111,6 +111,7 @@
 		99C569BD2E834A0200304547 /* AIConversationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C569BC2E834A0200304547 /* AIConversationMessage.swift */; };
 		99CC5BAC2CF804A500EF43DC /* WebRTCStatsReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CC5BAB2CF804A200EF43DC /* WebRTCStatsReporter.swift */; };
 		99CC5BAE2CF80D3A00EF43DC /* WebRTCEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CC5BAD2CF80D3400EF43DC /* WebRTCEventHandler.swift */; };
+		AA0001002F3E000100000001 /* CallReportCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00FF002F3E000100000001 /* CallReportCollectorTests.swift */; };
 		AA0001022F3E000100000001 /* TelnyxCallReportCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0001012F3E000100000001 /* TelnyxCallReportCollector.swift */; };
 		AA0001042F3E000100000001 /* CallReportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0001032F3E000100000001 /* CallReportModels.swift */; };
 		AA0001062F3E000100000001 /* TelnyxLogCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0001052F3E000100000001 /* TelnyxLogCollector.swift */; };
@@ -321,6 +322,7 @@
 		99B6E0002CF547680010CA96 /* DebugReportDataMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugReportDataMessage.swift; sourceTree = "<group>"; };
 		99C569BC2E834A0200304547 /* AIConversationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIConversationMessage.swift; sourceTree = "<group>"; };
 		99CC5BAB2CF804A200EF43DC /* WebRTCStatsReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCStatsReporter.swift; sourceTree = "<group>"; };
+		AA00FF002F3E000100000001 /* CallReportCollectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallReportCollectorTests.swift; sourceTree = "<group>"; };
 		AA0001012F3E000100000001 /* TelnyxCallReportCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelnyxCallReportCollector.swift; sourceTree = "<group>"; };
 		AA0001032F3E000100000001 /* CallReportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallReportModels.swift; sourceTree = "<group>"; };
 		AA0001052F3E000100000001 /* TelnyxLogCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelnyxLogCollector.swift; sourceTree = "<group>"; };
@@ -799,6 +801,7 @@
 			children = (
 				B391220B2604D9C50051E076 /* PeerConnectionTests.swift */,
 				B391221F260502650051E076 /* CallTests.swift */,
+				AA00FF002F3E000100000001 /* CallReportCollectorTests.swift */,
 			);
 			path = WebRTC;
 			sourceTree = "<group>";
@@ -1247,6 +1250,7 @@
 				B368BED425EDDBC90032AE52 /* TelnyxRTCTests.swift in Sources */,
 				B366D3FB26150D1100156FE1 /* StringExtension.swift in Sources */,
 				B391220C2604D9C50051E076 /* PeerConnectionTests.swift in Sources */,
+				AA0001002F3E000100000001 /* CallReportCollectorTests.swift in Sources */,
 				B3912264260F6A050051E076 /* TelnyxRTCMulticallTests.swift in Sources */,
 				B3912220260502650051E076 /* CallTests.swift in Sources */,
 				B3A1555928767E2D00C70528 /* RTCTestDelegate.swift in Sources */,
