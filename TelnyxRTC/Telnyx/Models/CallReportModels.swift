@@ -205,12 +205,13 @@ public struct AnyCodable: Codable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         
-        if let intValue = try? container.decode(Int.self) {
+        // Check Bool before Int - Bool can decode from 1/0, so Int would greedily match first
+        if let boolValue = try? container.decode(Bool.self) {
+            value = boolValue
+        } else if let intValue = try? container.decode(Int.self) {
             value = intValue
         } else if let doubleValue = try? container.decode(Double.self) {
             value = doubleValue
-        } else if let boolValue = try? container.decode(Bool.self) {
-            value = boolValue
         } else if let stringValue = try? container.decode(String.self) {
             value = stringValue
         } else if let arrayValue = try? container.decode([AnyCodable].self) {

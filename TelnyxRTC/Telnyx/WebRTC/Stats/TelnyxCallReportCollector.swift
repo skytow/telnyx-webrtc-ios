@@ -36,6 +36,13 @@ public class TelnyxCallReportCollector {
     
     // MARK: - Properties
     
+    /// Shared ISO8601 formatter with fractional seconds for consistent timestamp formatting
+    private static let iso8601Formatter: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+    
     private let config: CallReportConfig
     private let logCollectorConfig: LogCollectorConfig
     private weak var peerConnection: RTCPeerConnection?
@@ -256,6 +263,10 @@ public class TelnyxCallReportCollector {
     }
 
     /// URLSession delegate that accepts self-signed certificates (matches WebSocket behavior)
+    ///
+    /// ⚠️ Security Note: This accepts ALL self-signed certificates for dev/staging parity.
+    /// In production, this enables MITM attacks on call reports. Consider production-gating
+    /// this behavior or restricting to known dev/staging hostnames only.
     private class AllowSelfSignedDelegate: NSObject, URLSessionDelegate {
         func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge,
                         completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
@@ -492,8 +503,6 @@ public class TelnyxCallReportCollector {
         inboundAudio: RTCInboundRTPStreamStats?,
         candidatePair: RTCIceCandidatePairStats?
     ) -> CallReportInterval {
-        let iso8601 = ISO8601DateFormatter()
-        iso8601.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
         
         var audioStats: AudioStats?
         var outboundStats: OutboundAudioStats?
@@ -541,8 +550,8 @@ public class TelnyxCallReportCollector {
         }
         
         return CallReportInterval(
-            intervalStartUtc: iso8601.string(from: start),
-            intervalEndUtc: iso8601.string(from: end),
+            intervalStartUtc: Self.iso8601Formatter.string(from: start),
+            intervalEndUtc: Self.iso8601Formatter.string(from: end),
             audio: audioStats,
             connection: connectionStats
         )

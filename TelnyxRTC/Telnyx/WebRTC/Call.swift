@@ -626,15 +626,25 @@ public class Call {
         // Reset benchmarking when call ends
         CallTimingBenchmark.reset()
 
+        // Build context dict, filtering out nil values
+        var endCallContext: [String: AnyCodable] = [:]
+        if let cause = terminationReason?.cause {
+            endCallContext["cause"] = AnyCodable(cause)
+        }
+        if let causeCode = terminationReason?.causeCode {
+            endCallContext["causeCode"] = AnyCodable(causeCode)
+        }
+        if let sipCode = terminationReason?.sipCode {
+            endCallContext["sipCode"] = AnyCodable(sipCode)
+        }
+        if let sipReason = terminationReason?.sipReason {
+            endCallContext["sipReason"] = AnyCodable(sipReason)
+        }
+        
         callReportCollector?.addLogEntry(
             level: "info",
             message: "Call ended",
-            context: [
-                "cause": terminationReason?.cause ?? "",
-                "causeCode": terminationReason?.causeCode ?? 0,
-                "sipCode": terminationReason?.sipCode ?? 0,
-                "sipReason": terminationReason?.sipReason ?? ""
-            ]
+            context: endCallContext.isEmpty ? nil : endCallContext
         )
 
         self.stopRingtone()

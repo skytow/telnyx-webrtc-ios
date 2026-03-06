@@ -136,12 +136,13 @@ class CallReportCollectorTests: XCTestCase {
         // Create a test summary
         let summary = CallReportSummary(
             callId: "test-call-123",
+            state: "active",
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
-            clientState: "test-state",
+            voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: collector.callStartTime),
             endTimestamp: nil,
-            callDuration: nil
+            durationSeconds: nil
         )
         
         // Flush should create a payload
@@ -159,12 +160,13 @@ class CallReportCollectorTests: XCTestCase {
         
         let summary = CallReportSummary(
             callId: "test-call-123",
+            state: "active",
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
-            clientState: "test-state",
+            voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: collector.callStartTime),
             endTimestamp: nil,
-            callDuration: nil
+            durationSeconds: nil
         )
         
         // First flush
@@ -190,12 +192,13 @@ class CallReportCollectorTests: XCTestCase {
         
         let summary = CallReportSummary(
             callId: "test-call-123",
+            state: "active",
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
-            clientState: "test-state",
+            voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: Date()),
             endTimestamp: nil,
-            callDuration: nil
+            durationSeconds: nil
         )
         
         let payload = collector.flush(summary: summary)
@@ -219,12 +222,13 @@ class CallReportCollectorTests: XCTestCase {
         
         let summary = CallReportSummary(
             callId: "test-call-123",
+            state: "done",
+            durationSeconds: (collector.callEndTime ?? Date()).timeIntervalSince(collector.callStartTime),
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
-            clientState: "test-state",
+            voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: collector.callStartTime),
-            endTimestamp: ISO8601DateFormatter().string(from: collector.callEndTime ?? Date()),
-            callDuration: Int((collector.callEndTime ?? Date()).timeIntervalSince(collector.callStartTime))
+            endTimestamp: ISO8601DateFormatter().string(from: collector.callEndTime ?? Date())
         )
         
         // This will attempt to post - we can't easily mock URLSession in this context
@@ -246,12 +250,13 @@ class CallReportCollectorTests: XCTestCase {
         
         let summary = CallReportSummary(
             callId: "test-call-123",
+            state: "done",
+            durationSeconds: 10.0,
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
-            clientState: "test-state",
+            voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: collector.callStartTime),
-            endTimestamp: ISO8601DateFormatter().string(from: collector.callEndTime ?? Date()),
-            callDuration: 10
+            endTimestamp: ISO8601DateFormatter().string(from: collector.callEndTime ?? Date())
         )
         
         // Invalid host should log error but not crash
@@ -298,12 +303,13 @@ class CallReportCollectorTests: XCTestCase {
         
         let summary = CallReportSummary(
             callId: "test-call-123",
+            state: "done",
+            durationSeconds: 5.0,
             telnyxSessionId: "session-456",
             telnyxLegId: "leg-789",
-            clientState: "test-state",
+            voiceSdkSessionId: "test-session",
             startTimestamp: ISO8601DateFormatter().string(from: collector.callStartTime),
-            endTimestamp: ISO8601DateFormatter().string(from: collector.callEndTime ?? Date()),
-            callDuration: 5
+            endTimestamp: ISO8601DateFormatter().string(from: collector.callEndTime ?? Date())
         )
         
         let payload = CallReportPayload(
