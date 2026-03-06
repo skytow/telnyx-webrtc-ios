@@ -1,5 +1,10 @@
 # Reference Documentation
 
+## Features
+
+-   [Call Reports](call-reports/call-reports.md)
+-   [WebRTC Statistics](webrtc-stats/webrtc-stats.md)
+
 ## Protocols
 
 -   [AIAssistantManagerDelegate](protocols/AIAssistantManagerDelegate.md)
