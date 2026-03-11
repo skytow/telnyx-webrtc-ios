@@ -260,6 +260,12 @@ public class Call {
     /// A call can have multiple legs (e.g., in call transfers). This ID identifies this specific leg.
     public internal(set) var telnyxLegId: UUID?
     
+    /// The unique Telnyx Call Control identifier for this call.
+    /// This ID is used for outbound call flows (parked & bridged scenarios) and can be used
+    /// to interact with the Telnyx Call Control API. The format is typically `"v3:<unique_id>"`.
+    /// This field may be `nil` for older backend versions or certain call flows.
+    public internal(set) var telnyxCallControlId: String?
+    
     /// Enables WebRTC statistics reporting for debugging purposes.
     /// When true, the SDK will collect and send WebRTC statistics to Telnyx servers.
     /// This is useful for troubleshooting call quality issues.
@@ -1324,6 +1330,25 @@ extension Call {
                 } else {
                     Logger.log.w(message: "Call:: .ANSWER missing SDP")
                 }
+                
+                // Parse Telnyx identifiers from ANSWER message
+                if let telnyxSessionId = params["telnyx_session_id"] as? String,
+                   let telnyxSessionUUID = UUID(uuidString: telnyxSessionId) {
+                    self.telnyxSessionId = telnyxSessionUUID
+                }
+                
+                if let telnyxLegId = params["telnyx_leg_id"] as? String,
+                   let telnyxLegIdUUID = UUID(uuidString: telnyxLegId) {
+                    self.telnyxLegId = telnyxLegIdUUID
+                }
+                
+                // Parse telnyx_call_control_id (optional, for outbound call flows)
+                if let telnyxCallControlId = params["telnyx_call_control_id"] as? String,
+                   !telnyxCallControlId.isEmpty {
+                    self.telnyxCallControlId = telnyxCallControlId
+                    Logger.log.i(message: "Call:: Received telnyx_call_control_id in ANSWER: \(telnyxCallControlId)")
+                }
+                
                 var customHeaders = [String:String]()
                 if params["dialogParams"] is [String:Any] {
                     do {
