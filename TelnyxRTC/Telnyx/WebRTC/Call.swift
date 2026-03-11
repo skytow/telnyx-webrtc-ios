@@ -1109,7 +1109,8 @@ extension Call {
                 }
                 
                 // Parse telnyx_call_control_id (optional, for outbound call flows)
-                if let telnyxCallControlId = params["telnyx_call_control_id"] as? String {
+                if let telnyxCallControlId = params["telnyx_call_control_id"] as? String,
+                   !telnyxCallControlId.isEmpty {
                     self.telnyxCallControlId = telnyxCallControlId
                     Logger.log.i(message: "Call:: Received telnyx_call_control_id in ANSWER: \(telnyxCallControlId)")
                 }

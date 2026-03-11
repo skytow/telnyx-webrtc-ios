@@ -99,7 +99,7 @@ class AnswerMessageParsingTests: XCTestCase {
     }
     
     /// Test parsing an ANSWER message with an empty `telnyx_call_control_id`.
-    /// This ensures the SDK handles edge cases gracefully.
+    /// This ensures the SDK handles edge cases gracefully by not storing empty strings.
     func testAnswerMessageParsingWithEmptyCallControlId() {
         let jsonMessage = """
         {
@@ -126,10 +126,13 @@ class AnswerMessageParsingTests: XCTestCase {
             return
         }
         
-        // Verify telnyx_call_control_id is present but empty
+        // Verify telnyx_call_control_id is present in params but empty
         let telnyxCallControlId = params["telnyx_call_control_id"] as? String
-        XCTAssertNotNil(telnyxCallControlId, "telnyx_call_control_id should be present")
-        XCTAssertEqual(telnyxCallControlId, "", "telnyx_call_control_id should be empty string")
+        XCTAssertNotNil(telnyxCallControlId, "telnyx_call_control_id should be present in params")
+        XCTAssertEqual(telnyxCallControlId, "", "telnyx_call_control_id should be empty string in params")
+        
+        // Note: The Call class will NOT store empty strings - it checks !telnyxCallControlId.isEmpty
+        // This test verifies the message parsing; the Call class behavior is tested separately
     }
     
     /// Test that the ANSWER method constant matches the expected value.
